@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+/** route to show all tasks */
+Route::get('/tasks', 'TasksController@index')->name('tasks')->middleware('auth');
